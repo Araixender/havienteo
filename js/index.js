@@ -35,5 +35,4 @@ for (let post of posts){
 
 
 
-history.pushState()
 postElements.innerHTML = htmlContent
