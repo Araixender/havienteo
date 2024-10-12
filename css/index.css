@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --navy_blue: #184056;
+  --pink_site: #e94d65;
+  --muted_gray: #a1a1a1;
+  --muted: rgb(97, 92, 92);;
+  --whiting: white;
+  --roboto: "Roboto", sans-serif;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--roboto);
+}
+ 
+/* upper navbar starts */
+
+.f-header{
+  display: flex;
+  justify-content: space-around;
+  background: var(--navy_blue);
+  padding: 8px;
+  
+}
+
+.header-wrapper-1{
+  display: flex;
+  gap: 3rem;
+}
+
+.h-wrapper-1{
+  margin: 0 2px;
+}
+
+.h-wrapper-1 span, .h-div-title{
+  margin: 0 2px;
+}
+
+.header-wrapper-2{
+  display: flex;
+}
+
+.header-wrapper-wrapper-2{
+  display: flex;
+}
+
+.social-links-container{
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.h-div-icon{
+  color: var(--pink_site);
+  font-size: 14px;
+}
+
+.h-div-title{
+  color: var(--whiting);
+  font-size: 14px;
+}
+
+.h-div-para{
+  color: var(--muted_gray);
+  font-size: 13px;
+}
+
+
+/* upper nav ends  */
+
+
+/* lower nav starts  */
+
+
+
+.logo-section a img{
+  width: 15rem;
+}
+
+.lower-navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 20px #9c9b9b;
+  padding: 0px 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.lower-list-sec ul{
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.lower-list-sec ul li a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.list-n-contact{
+  display: flex; 
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-btn{
+  background: var(--pink_site);
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 2px solid var(--pink_site);
+  color: white;
+  cursor: pointer;
+}
+
+.nav-search-btn{
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin: 0px 12px;
+  cursor: pointer
+}
+
+
+/* navbar end */
+
+
+/* hero section */
+.hero-section-img-1{
+  background: url('/public/images/hero-section.jpg');
+}
+
+.hero-section-img-2{
+  background: url('/public/images/hero-section-2.jpg');
+}
+
+.hero-section-img-3{
+  background: url('/public/images/hero-section-3.jpg');
+}
+
+.hero-section{
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0rem 4rem;
+}
+
+
+.b-hero-heading{
+  color: var(--navy_blue);
+  font-size: 4rem;
+  display: block;
+}
+.b-hero-h-2{
+  font-size: 2rem !important;
+}
+.p-hero-heading{
+  color: var(--pink_site);
+  font-size: 4rem;
+}
+.p-hero-h-2{
+  font-size: 2rem !important;
+  margin: 1rem 0rem !important;
+}
+.upper-hero-heading{
+  color: var(--muted);
+  font-weight: 400;
+  margin: .5rem 0rem;
+}
+
+.upper-hero-heading{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+}
+
+.upper-hero-heading .hero-line{
+  width: 2rem;
+  height: .3rem;
+  background: var(--pink_site);
+  display: block;
+
+}
+
+.hero-carousel-1 p{
+  margin: 1rem 0rem;
+  color: var(--muted);
+}
+.hero-btn{
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btn button{
+  padding: .6rem 1rem;
+  color: white;
+  font-size: 16px;
+  margin: 1rem 0rem;
+  cursor: pointer;
+}
+
+
+.hero-btn-1{
+  background: var(--pink_site);
+  border: 2px solid var(--pink_site);
+}
+
+.hero-btn-2{
+  background: var(--navy_blue);
+  border: 2px solid var(--navy_blue);
+  margin: 0rem .4rem;
+}
+
+
+/* Card Section  */
+
+.cards-section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 3rem;
+  gap: 1rem;
+}
+
+.card{
+  box-shadow: 2px 2px 10px var(--muted);
+  padding: 3rem 2rem;
+  flex: 1;
+}
+
+.card h3, .card h2, .card p{
+  margin: .4rem 0rem;
+}
+
+.card p{
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.card h2 {
+  color: var(--navy_blue);
+}
+.card h3{
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card button{
+  background: var(--pink_site);
+  border: 2px solid var(--pink_site);
+  padding: .5rem 1rem;
+  margin: 1rem 0rem;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-3-btn{
+  bottom: -7rem;
+}
+
+.card-2-btn{
+  bottom: -4rem;
+}
+
+
+/* card section completed */
+
+
+/* compling section */
+
+.complain-section{
+  display: flex;
+  padding: 0rem 3rem;
+  flex: 1;
+}
+
+.complain-img img{
+  width: 29rem;
+}
+
+.complain-content{
+
+}
+
+.b-comp-head{
+
+}
+
+.r-comp-head{
+
+}
