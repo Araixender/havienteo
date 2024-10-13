@@ -23,6 +23,7 @@
 //   ];
 const gettingPost = async () => {
     const postapi = await fetch("https://centralapps.hivefinty.com/v1/databases/670a9a430005df75e1f2/collections/670a9a4b001b9946e88e/documents", {
+        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
             "X-Appwrite-Response-Format": "1.6.0",

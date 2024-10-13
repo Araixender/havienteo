@@ -3,6 +3,7 @@ const CreateMessage = async () => {
     try {
         const req = await fetch('https://centralapps.hivefinty.com/v1/databases/670a9a430005df75e1f2/collections/670c16c1001102e75e21/documents', {
             method: "GET",
+            mode: "no-cors",
             headers: {
                 "Content-Type": "application/json",
                 "X-Appwrite-Response-Format": "1.6.0",

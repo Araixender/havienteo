@@ -3,6 +3,7 @@ const sessionId = localStorage.getItem("session_id")
 const LoggedInUser = async(email, password) => {
     const req = await fetch(`https://centralapps.hivefinty.com/v1/account/sessions/${sessionId}`, {
         method: "GET",
+        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
             "X-Appwrite-Response-Format": "1.6.0",
@@ -18,6 +19,7 @@ LoggedInUser()
 const DeleteSession = async() => {
     const req = await fetch(`https://centralapps.hivefinty.com/v1/account/sessions/${sessionId}`, {
         method: "DELETE",
+        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
             "X-Appwrite-Response-Format": "1.6.0",
