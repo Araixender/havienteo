@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const CreateMessage = async (name, email, subject, message) => {
     const randomString = generateDateBasedRandomString();
     try{const req = await fetch('https://centralapps.hivefinty.com/v1/databases/670a9a430005df75e1f2/collections/670c16c1001102e75e21/documents', {
-        mode: "no-cors",
+        
         method: "POST",
         headers: {
             "Content-Type": "application/json",

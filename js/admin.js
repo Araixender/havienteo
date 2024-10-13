@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
 const LoggedInUser = async(email, password) => {
     const req = await fetch('https://centralapps.hivefinty.com/v1/account/sessions/email', {
         method: "POST",
-        mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
             "X-Appwrite-Response-Format": "1.6.0",
