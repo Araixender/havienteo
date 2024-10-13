@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="dashboard.html">Dashboard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+            </ul>
+            <a href="create-post.html" class="btn btn-primary">Create</a>
+            <div id="app" class="mx-2"></div>
+          </div>
+        </div>
+      </nav>
+    <form class="container" id="post-form">
+        <div class="my-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="" class="form-control" id="title" placeholder="Something title">
+        </div>
+        <div class="my-3">
+            <label for="exampleFormControlInput1" class="form-label">Sub Title</label>
+            <input type="" class="form-control" id="sub-title" placeholder="Something Subtitle">
+        </div>
+        <div class="my-3">
+            <label for="exampleFormControlInput1" class="form-label">Image</label>
+            <input type="" class="form-control" id="img" placeholder="URL">
+        </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea class="form-control" id="desc" rows="20"></textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Update Post</button>
+          </div>
+    </div>
+    <script src="./js/update-post.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+    async
+    crossorigin="anonymous"
+    data-clerk-publishable-key="pk_test_ZGVzdGluZWQtc3BhcnJvdy00NS5jbGVyay5hY2NvdW50cy5kZXYk"
+    src="https://destined-sparrow-45.clerk.accounts.dev/npm/@clerk/clerk-js@4/dist/clerk.browser.js"
+    type="text/javascript"
+  ></script>
+    <script>
+        window.addEventListener('load', async function () {
+        await Clerk.load()
+    
+        if (Clerk.user) {
+          document.getElementById('app').innerHTML = `
+            <div id="user-button"></div>
+          `
+    
+          const userButtonDiv = document.getElementById('user-button')
+    
+          Clerk.mountUserButton(userButtonDiv)
+        }else{
+            window.location.replace("/index.html")
+        }})
+    </script>
+  </body>
+</html>
